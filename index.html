@@ -1,0 +1,64 @@
+<html>
+
+    <head>
+        <title>Trippy 1.0</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    </head>
+
+<style>
+.form{
+    font-size: 3rem;
+    padding: 3rem;
+    margin-top: 26rem;
+}
+#text-placeholder{
+    font-size: 11rem;
+    margin-top: 10rem;
+}
+.btn{
+    margin-top: 2rem;
+}
+.fa{
+    font-size: 4rem;
+    margin: 2rem;
+    text-shadow: 2px 1px 36px #000;
+}
+.sp{
+    text-shadow: 3px 3px 15px #000;
+}
+.about{
+    margin-top: 12rem;
+    font-size: 2rem;
+}
+</style>
+
+
+<body>
+
+    <div id="home">
+        <center class="form">
+            <input class="form-control" type="text" id="text" placeholder="Type your text here.."/>
+            <button class="btn" type="submit" onclick="trip()">TRIP ME!</button>
+        </center>
+        <div class="about">
+            <div>Developed by:<br>Arjun Mahishi (@arjunmahishi)<br>Jayesh shukla</div>
+            
+        </div>
+    </div>
+
+    <div id="trip">
+        <i onclick="form()" class="fa fa-arrow-left" aria-hidden="true"></i>
+        <center id="text-placeholder"></center>
+    </div>
+
+</body>
+
+<script src="vendors/jquery/jquery.min.js"></script>
+<script src="js/main.js"></script>
+	
+</html>
