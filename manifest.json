@@ -1,6 +1,6 @@
 {
-  "name": "Preact PWA",
-  "short_name": "Preact PWA",
+  "name": "TripMe 1.0",
+  "short_name": "TripMe 1.0",
   "start_url": "./",
   "display": "standalone",
   "orientation": "portrait",
