@@ -1,19 +1,31 @@
 {
-  "name": "TripMe 1.0",
-  "short_name": "TripMe 1.0",
-  "start_url": "./",
+  "name": "TripMe",
+  "short_name": "TripMe",
+  "start_url": "./index.html",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
   "theme_color": "#673ab8",
-  "icons": [{
-    "src": "./assets/icons/icon.jpg",
-    "type": "image/jpg",
-    "sizes": "192x192"
-  },
-  {
-    "src": "./assets/icons/icon.jpg",
-    "type": "image/jpg",
-    "sizes": "512x512"
-  }]
+  "icons": [
+    {
+      "src": "/assets/icons/icon.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/assets/icons/icon.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src":"/assets/icons/icon.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
 }
