@@ -1,24 +1,18 @@
-self.addEventListener('install', function(e) {
-    e.waitUntil(
-        caches.open('trippy-v1').then(function(cache) {
+let version = 1;
+
+self.addEventListener("install", function(event) {
+    console.log('WORKER: install event in progress.');
+    event.waitUntil(
+        caches.open(version + 'fundamentals')
+        .then(function(cache) {
             return cache.addAll([
                 '/',
                 '/index.html',
-                '/assets/icons/icon.png',
-                '/js/main.js'
+                '/js/main.js',
             ]);
         })
-    );
-});
-
-
-self.addEventListener('fetch', function(event) {
-
-    console.log(event.request.url);
-    event.respondWith(caches.match(event.request)
-        .then(function(response) {
-            return response || fetch(event.request);
+        .then(function() {
+            console.log('WORKER: install completed');
         })
     );
-
 });
