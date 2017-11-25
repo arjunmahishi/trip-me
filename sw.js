@@ -17,7 +17,7 @@ self.addEventListener("install", function(event) {
             return cache.addAll([
                 '/',
                 '/index.html',
-                '/js/main.js',
+                '/js/sketch.js',
             ]);
         })
         .then(function() {
