@@ -27,7 +27,7 @@ function colors(){
 
 	document.getElementById("text-placeholder").innerHTML = "";
 	
-	var text = document.getElementById("text").value;
+	var text = "";//document.getElementById("text").value;
 	if(text != ""){
 		createSpans(text);
 	}else{
