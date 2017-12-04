@@ -1,4 +1,4 @@
-let version = 1;
+let version = 2;
 
 self.addEventListener('fetch', function(event) {
     console.log(event.request.url);
@@ -18,6 +18,9 @@ self.addEventListener("install", function(event) {
                 '/',
                 '/index.html',
                 '/js/sketch.js',
+                '/js/slider.js',
+                '/css/main.css',
+                '/css/slider.css'
             ]);
         })
         .then(function() {

@@ -1,0 +1,37 @@
+.form{
+        font-size: 3rem;
+        padding: 3rem;
+        margin-top: 11rem;
+    }
+    #text-placeholder{
+        font-size: 11rem;
+        margin-top: 10rem;
+    }
+    .btn{
+        margin-top: 2rem;
+    }
+    .fa{
+        font-size: 4rem;
+        margin: 2rem;
+        text-shadow: 2px 1px 36px #000;
+    }
+    .sp{
+        text-shadow: 3px 3px 15px #000;
+    }
+
+    .star{
+        margin-top: 10rem;
+    }
+
+    .about{
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 2rem;
+        text-shadow: 1px 1px 6px #0000008c;
+        font-weight: 900;
+        font-family: consolas;
+    }
+
+    .slider-container{
+        margin-top: 15rem;
+    }
