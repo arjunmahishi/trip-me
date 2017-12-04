@@ -13,6 +13,8 @@
         <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
+        <link rel="stylesheet" type="text/css" href="css/slider.css">
+
     </head>
 
 <style>
@@ -52,8 +54,6 @@
 
     .slider-container{
         margin-top: 15rem;
-        padding-left: 10rem;
-        padding-right: 10rem;
     }
 
 </style>
@@ -64,8 +64,13 @@
     <div id="home">
 
         <div class="container slider-container">
-            <input type="range" min="0" max="4" step="0.1" value="2.5" id="sensitivity" 
-            oninput="updateSensitivity()" /><span class="badge" id="range-lable"></span>
+            <div class="range">
+                <input name="range" type="range" min="0" max="4" step="0.1" id="sensitivity"
+                oninput="updateSensitivity()">
+                <div class="range-output">
+                    <output class="output" for="range" id="slider-output"></output>
+                </div>
+            </div>
         </div>
 
         <!-- <p id="amp-min" hidden="true"></p>
@@ -87,6 +92,7 @@
 <script src="vendors/p5/p5.dom.min.js"></script>
 <script src="vendors/p5/p5.sound.min.js"></script>
 <script src="js/sketch.js"></script>
+<script src="js/slider.js"></script>
 	
 <script type="text/javascript">
     if('serviceWorker' in navigator) {

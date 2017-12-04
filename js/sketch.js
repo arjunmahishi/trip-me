@@ -44,7 +44,7 @@ function checkThreshold(vol){
 function updateSensitivity(){
     const slider = document.querySelector("#sensitivity");
     let displayValue = Math.round((slider.value/slider.max) * 10);
-    document.querySelector("#range-lable").innerHTML = "Sensitivity: " + displayValue;
+    document.querySelector("#slider-output").value = "Sensitivity: " + displayValue;
 }
 
 
