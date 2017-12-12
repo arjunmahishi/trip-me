@@ -46,7 +46,7 @@
 <script type="text/javascript">
     if('serviceWorker' in navigator) {
         navigator.serviceWorker
-            .register('/sw.js')
+            .register( window.location.href + 'sw.js')
             .then(function() { 
                 console.log("Service Worker Registered"); 
         });
