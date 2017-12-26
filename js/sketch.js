@@ -5,47 +5,17 @@ var back = ["AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","Beige","Bisq
 
 
 function setup(){
-    // createCanvas(document.body.clientHeight, document.body.clientWidth);
+    createCanvas(windowWidth, windowHeight);
     // amp = new p5.Amplitude();
     mic.start();
 }
 
 function draw(){
-    vol = mic.getLevel();
-    if(checkThreshold(vol)){
-        // console.log(vol);
-        document.body.style.background = back[Math.floor(Math.random()*back.length)];
-    }
+    background(50);
+    vol = parseInt(mic.getLevel() * 1000);
+    if(vol < leastVol) leastVol = vol;
+    if(vol > bestVol) bestVol = vol;
+    text(""+vol, width/2, height/2);
+    text("Best: "+bestVol, width/2, height/2 + 20);
+    text("Least: "+leastVol, width/2, height/2 + 40);
 }
-
-function checkThreshold(vol){
-
-    if(vol <= leastVol){
-        leastVol = vol;
-    }
-
-    if(vol >= bestVol){
-        bestVol = vol;
-    }
-
-    // document.querySelector("#amp-curr").innerHTML = vol;
-    // document.querySelector("#amp-min").innerHTML = leastVol;
-    // document.querySelector("#amp-max").innerHTML = bestVol;
-
-    const slider = document.querySelector("#sensitivity");
-    let sensitivity = (slider.max - slider.value + 0.01) + slider.min;
-
-    if(vol*100 > sensitivity){
-        return true;
-    }
-    return false;
-}
-
-function updateSensitivity(){
-    const slider = document.querySelector("#sensitivity");
-    let displayValue = Math.round((slider.value/slider.max) * 10);
-    document.querySelector("#slider-output").value = "Sensitivity: " + displayValue;
-}
-
-
-updateSensitivity();

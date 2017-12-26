@@ -29,30 +29,14 @@
         <link rel="stylesheet" type="text/css" href="css/slider.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
 
+        <script src="vendors/p5/p5.min.js"></script>
+        <script src="vendors/p5/p5.dom.min.js"></script>
+        <script src="vendors/p5/p5.sound.min.js"></script>
+
     </head>
 
 <body>
-
-    <div id="home">
-
-        <div class="container slider-container">
-            <div class="range">
-                <input name="range" type="range" min="0" max="4" step="0.1" id="sensitivity"
-                oninput="updateSensitivity()">
-                <div class="range-output">
-                    <output class="output" for="range" id="slider-output"></output>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 star">
-            <iframe src="https://ghbtns.com/github-btn.html?user=arjunmahishi&repo=trip-me&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
-        </div>
-        <div class="about col-xs-12">
-            <div>Developed by:<br>Arjun Mahishi (<a href="https://twitter.com/arjunmahishi">@arjunmahishi</a>)
-        </div>
-    </div>
-
+    <script src="js/sketch.js"></script>    
 </body>
 
 <script type="text/javascript">
@@ -65,21 +49,12 @@
     }
 </script>
 
-<script>
+<!-- <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'UA-41041173-3');
-</script>
-
-<script src="vendors/jquery/jquery.min.js"></script>
-<script src="vendors/p5/p5.min.js"></script>
-<script src="vendors/p5/p5.dom.min.js"></script>
-<script src="vendors/p5/p5.sound.min.js"></script>
-<script src="js/sketch.js"></script>
-<script src="js/slider.js"></script>
-	
-
+</script> -->
 
 </html>
