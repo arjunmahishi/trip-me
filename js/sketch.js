@@ -18,4 +18,8 @@ function draw(){
     text(""+vol, width/2, height/2);
     text("Best: "+bestVol, width/2, height/2 + 20);
     text("Least: "+leastVol, width/2, height/2 + 40);
+    for(let _=0; _< vol; _++){
+        fill(random(255), random(255), random(255));
+        ellipse(random(10, width-10), random(10, height-10), 20, 20)
+    }
 }
