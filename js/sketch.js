@@ -30,8 +30,8 @@ function draw(){
     if(vol > bestVol) bestVol = vol;
     if(vol < leastVol) leastVol = vol;
 
-    text(""+vol, width/2, height/2);
-    text("Best: "+bestVol, width/2, height/2 + 20);
+    // text(""+vol, width/2, height/2);
+    // text("Best: "+bestVol, width/2, height/2 + 20);
 
     stroke(0);
     strokeWeight(3);
