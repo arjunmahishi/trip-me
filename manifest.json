@@ -10,6 +10,11 @@
     {
       "src": "/assets/icons/icon.png",
       "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/assets/icons/icon.png",
+      "type": "image/png",
       "sizes": "48x48"
     },
     {
@@ -26,11 +31,6 @@
       "src": "/assets/icons/icon.png",
       "type": "image/png",
       "sizes": "192x192"
-    },
-    {
-      "src": "/assets/icons/icon.png",
-      "type": "image/png",
-      "sizes": "512x512"
     }
   ]
 }

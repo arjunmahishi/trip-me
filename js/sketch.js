@@ -27,6 +27,12 @@ function draw(){
 
     background(bgData.r, bgData.g, bgData.b);
 
+    if(vol > bestVol) bestVol = vol;
+    if(vol < leastVol) leastVol = vol;
+
+    text(""+vol, width/2, height/2);
+    text("Best: "+bestVol, width/2, height/2 + 20);
+
     stroke(0);
     strokeWeight(3);
     for (var i = shapes.length - 1; i >= 0; i--) {

@@ -1,4 +1,4 @@
-let version = 2.1;
+let version = 3.0;
 
 self.addEventListener("install", function(event) {
     console.log('WORKERv' + version + ': install event in progress.');
@@ -9,9 +9,8 @@ self.addEventListener("install", function(event) {
                 '/',
                 '/index.html',
                 '/js/sketch.js',
-                '/js/slider.js',
+                '/js/shape.js',
                 '/css/main.css',
-                '/css/slider.css',
 
                 '/vendors/p5/p5.sound.min.js',
                 '/vendors/p5/p5.dom.min.js',
