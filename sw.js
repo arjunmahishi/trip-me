@@ -1,4 +1,4 @@
-let version = 3.2;
+let version = 3.3;
 
 self.addEventListener("install", function(event) {
     console.log('hydrogenV' + version + ': install event in progress.');
