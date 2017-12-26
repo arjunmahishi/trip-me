@@ -1,4 +1,4 @@
-let version = 3.0;
+let version = 3.1;
 
 self.addEventListener("install", function(event) {
     console.log('WORKERv' + version + ': install event in progress.');
