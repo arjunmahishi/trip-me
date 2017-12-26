@@ -1,15 +1,17 @@
 var mic = new p5.AudioIn();
-var vol, size, bestVol = 0, leastVol = 999, threshold = 200;
+var vol, size, threshold = 200;
 var shapes = [];
-var bgData = {
-    r: 50,
-    g: 50,
-    b: 50
-};
+var rChange = 1, gChange = 1, bChange = 1;
+var rValue, gValue, bValue;
 
 function setup(){
     mic.start();
     createCanvas(windowWidth, windowHeight);
+    
+    rValue = random(0, 256); 
+    gValue = random(0, 256);
+    bValue = random(0, 256);
+
     for(let _=0; _< 100; _++){
         shapes.push(new Shape());
     }
@@ -17,21 +19,18 @@ function setup(){
 
 function draw(){
     vol = parseInt(mic.getLevel() * 1000);
-    if(vol > threshold) {
-        bgData = {
-            r: random(255),
-            g: random(255),
-            b: random(255)
-        };
+
+    if(rValue > 255 || rValue < 0) rChange *= -1;
+    if(gValue > 255 || gValue < 50) gChange *= -1;
+    if(bValue > 255 || bValue < 50) bChange *= -1;
+
+    if(vol > 0) {
+        rValue += rChange;
+        gValue += gChange;
+        bValue += bChange;
     }
 
-    background(bgData.r, bgData.g, bgData.b);
-
-    if(vol > bestVol) bestVol = vol;
-    if(vol < leastVol) leastVol = vol;
-
-    // text(""+vol, width/2, height/2);
-    // text("Best: "+bestVol, width/2, height/2 + 20);
+    background(rValue, gValue, bValue);
 
     stroke(0);
     strokeWeight(3);

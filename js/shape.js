@@ -11,6 +11,8 @@ class Shape{
             b: random(0, 256)
         }
         this.type = (random(1, 3) < 2) ? "square" : "ellipse";
+        this.vFreq = random(-10, 10);
+        this.bFreq = random(0, 2)
     }
 
     render(){
@@ -18,7 +20,9 @@ class Shape{
         if(this.type == "ellipse") {
             ellipse(this.x, this.y, this.size, this.size);
         }else{
-            rect(this.x, this.y, this.size, this.size);  
+            // ellipse(this.x, this.y, this.size, this.size);
+            // rect(this.x, this.y, this.size, this.size); 
+            quad(this.x, this.y, this.x, this.y+this.size, this.x+this.size, this.y+this.size, this.x+this.size, this.y); 
         } 
     }
 
@@ -30,5 +34,20 @@ class Shape{
                 this.y = random(height + 100, height + 1000);
             }
         }
+
+        if(vol > this.threshold * 2) this.vFreq *= -1;
+        if(vol > this.threshold / 2) this.vibrate();
+        this.beat();
+    }
+
+    vibrate(){
+        this.x += this.vFreq;
+        if(this.x > width) this.x = 0;
+        if(this.x < 0) this.x = width-this.size;
+    }
+
+    beat(){
+        this.size += this.bFreq;
+        if(this.size > 100 || this.size < 20) this.bFreq *= -1;
     }
 }

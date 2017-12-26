@@ -1,7 +1,7 @@
-let version = 3.1;
+let version = 3.2;
 
 self.addEventListener("install", function(event) {
-    console.log('WORKERv' + version + ': install event in progress.');
+    console.log('hydrogenV' + version + ': install event in progress.');
     event.waitUntil(
         caches.open(version + 'fundamentals')
         .then(function(cache) {
