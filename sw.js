@@ -1,25 +1,31 @@
 let version = 3.4;
 
+var filesToCache = [
+    '/',
+    '/index.html',
+    '/experiences/hydrogen.html',
+    '/experiences/helium.html',
+
+    '/js/hydrogen/sketch.js',
+    '/js/hydrogen/shape.js',
+    '/js/helium/sketch.js',
+
+    '/css/main.css',
+
+    '/vendors/p5/p5.sound.min.js',
+    '/vendors/p5/p5.dom.min.js',
+    '/vendors/p5/p5.min.js',
+    
+    '/vendors/bootstrap/css/bootstrap.min.css',
+    '/vendors/font-awesome/css/font-awesome.min.css'
+]
+
 self.addEventListener("install", function(event) {
     console.log('hydrogenV' + version + ': install event in progress.');
     event.waitUntil(
         caches.open(version + 'fundamentals')
         .then(function(cache) {
-            return cache.addAll([
-                '/',
-                '/index.html',
-                '/js/sketch.js',
-                '/js/shape.js',
-                '/css/main.css',
-
-                '/vendors/p5/p5.sound.min.js',
-                '/vendors/p5/p5.dom.min.js',
-                '/vendors/p5/p5.min.js',
-                
-                '/vendors/jquery/jquery.min.js',
-                '/vendors/bootstrap/css/bootstrap.min.css',
-                '/vendors/font-awesome/css/font-awesome.min.css'
-            ]);
+            return cache.addAll(filesToCache);
         })
         .then(function() {
             console.log('WORKER: install completed');
