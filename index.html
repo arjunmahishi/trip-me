@@ -1,41 +1,45 @@
 <html>
 
-    <head>
+<head>
 
-        <title>Tr1pM3</title>
+    <title>Tr1pM3</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="author" content="Arjun Mahishi">
-        <meta name="description" content="A fun little webapp that gets you tripping. The app listens to the music playing in the background and creates a trippy experience by generating bizzar graphics with 2D and 3D shapes">
-        <meta name="keywords" content="trippy, progressive web app, pwa, tripme, javascript-demo, pwa-demo, web app, disco lights, music, beats">
+    <meta name="author" content="Arjun Mahishi">
+    <meta name="description" content="A fun little webapp that gets you tripping. The app listens to the music playing in the background and creates a trippy experience by generating bizzar graphics with 2D and 3D shapes">
+    <meta name="keywords" content="trippy, progressive web app, pwa, tripme, javascript-demo, pwa-demo, web app, disco lights, music, beats">
+    <meta name="theme-color" content="#673ab8" />
 
-        <meta name="theme-color" content="#673ab8" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/icon.png">
+    <link rel="icon" type="image/png" href="/assets/icons/icon.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/icons/icon.png" sizes="16x16">
+    <link rel="manifest" href="./manifest.json">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/icon.png">
-        <link rel="icon" type="image/png" href="/assets/icons/icon.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="/assets/icons/icon.png" sizes="16x16">
-        <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 
-        <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-
-    </head>
+</head>
 
 <body>
-    <h2>Experiences</h2>
-    <ul>
-        <li><a href="experiences/hydrogen.html">Hydrogen</a></li>
-        <li><a href="experiences/helium.html">Helium</a></li>
-    </ul>
-
-    <div>
-        <iframe async src="https://ghbtns.com/github-btn.html?user=arjunmahishi&repo=trip-me&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+    <div class="nav">
+        <div class="nav-title">Tripme</div>
+        <div class="nav-star">
+            <iframe async src="https://ghbtns.com/github-btn.html?user=arjunmahishi&repo=trip-me&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+        </div>
     </div>
-    <div>
-        <div>Developed by:<br> <a href="https://twitter.com/arjunmahishi">@arjunmahishi</a></div>
+    
+    <div class="exp-list">
+        <div class="exp-card">
+            <div class="exp-card-text">Hydrogen</div>
+        </div>
+    </div>
+
+    <div class="info">
+        <div>Developed by: <a href="https://twitter.com/arjunmahishi">@arjunmahishi</a></div>
     </div>
 </body>
+
+<script src="js/main.js"></script>
 
 <script type="text/javascript">
     if('serviceWorker' in navigator) {

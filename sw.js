@@ -1,8 +1,9 @@
-let version = 3.4;
+let version = 4.0;
 
 var filesToCache = [
     '/',
     '/index.html',
+    '/index.html?pwa=true',
     '/experiences/hydrogen.html',
     '/experiences/helium.html',
 
@@ -11,13 +12,11 @@ var filesToCache = [
     '/js/helium/sketch.js',
 
     '/css/main.css',
+    '/js/main.js',
 
     '/vendors/p5/p5.sound.min.js',
     '/vendors/p5/p5.dom.min.js',
     '/vendors/p5/p5.min.js',
-    
-    '/vendors/bootstrap/css/bootstrap.min.css',
-    '/vendors/font-awesome/css/font-awesome.min.css'
 ]
 
 self.addEventListener("install", function(event) {

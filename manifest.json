@@ -1,17 +1,12 @@
 {
   "name": "TripMe",
   "short_name": "TripMe",
-  "start_url": "./index.html",
+  "start_url": "./index.html?pwa=true",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#fff",
-  "theme_color": "#673ab8",
+  "background_color": "#505050",
+  "theme_color": "#505050",
   "icons": [
-    {
-      "src": "/assets/icons/icon.png",
-      "type": "image/png",
-      "sizes": "720x720"
-    },
     {
       "src": "/assets/icons/icon.png",
       "type": "image/png",
