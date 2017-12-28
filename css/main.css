@@ -41,6 +41,7 @@ body{
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.79);
     font-size: 1rem;
     font-weight: 9;
+    color: #fff;
 }
 a:link, a:visited {
     color: #33c739;
