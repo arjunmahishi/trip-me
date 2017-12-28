@@ -1,6 +1,8 @@
-let version = 4.0;
+let version = 4.3;
 
-var filesToCache = [
+let cacheName = "TripmeV" + version; 
+
+let filesToCache = [
     '/',
     '/index.html',
     '/index.html?pwa=true',
@@ -20,14 +22,14 @@ var filesToCache = [
 ]
 
 self.addEventListener("install", function(event) {
-    console.log('hydrogenV' + version + ': install event in progress.');
+    console.log(version + ': install event in progress.');
     event.waitUntil(
-        caches.open(version + 'fundamentals')
+        caches.open(cacheName)
         .then(function(cache) {
             return cache.addAll(filesToCache);
         })
         .then(function() {
-            console.log('WORKER: install completed');
+            console.log('service worker: install completed');
         })
     );
 });
@@ -39,4 +41,19 @@ self.addEventListener('fetch', function(event) {
             return response || fetch(event.request);
         })
     );
+});
+
+self.addEventListener('activate', function(e) {
+    console.log('service worker: Activate');
+    e.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if (key !== cacheName) {
+          console.log('service worker: Removing old cache', key);
+          return caches.delete(key);
+        }
+      }));
+    })
+    );
+    return self.clients.claim();
 });
