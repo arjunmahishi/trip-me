@@ -45,6 +45,9 @@
                 console.log("Service Worker Registered"); 
         });
     }
+
+    // HTTPS REDIRECT //
+    if (location.protocol !== 'https:') location.replace('https://' + location.href.split('//')[1]);
 </script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41041173-3"></script>

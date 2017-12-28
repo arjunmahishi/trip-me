@@ -11,7 +11,7 @@ const randomHexColor = () => {
 
 const openExp = (exp) => location.pathname = `experiences/${exp}.html`;
 
-experiences.map(exp =>{
+experiences.map(exp => {
 	var card = `
 		<div class="exp-card" onclick="openExp('${exp}')">
             <div class="exp-card-text">${exp}</div>
