@@ -1,7 +1,7 @@
 {
   "name": "TripMe",
   "short_name": "TripMe",
-  "start_url": "./index.html?pwa=true",
+  "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#505050",
