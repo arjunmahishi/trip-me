@@ -1,6 +1,7 @@
 let experiences = [
 	"hydrogen",
-	"helium"
+	"helium",
+	"lithium"
 ];
 
 const randomHexColor = () => {
