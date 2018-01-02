@@ -1,4 +1,4 @@
-let version = '4.4.1';
+let version = '4.4.2';
 
 let cacheName = "TripmeV" + version; 
 
