@@ -1,4 +1,4 @@
-let version = '4.3.2';
+let version = '4.4.1';
 
 let cacheName = "TripmeV" + version; 
 
@@ -6,12 +6,17 @@ let filesToCache = [
     '/',
     '/index.html',
     '/index.html?pwa=true',
-    '/experiences/hydrogen.html',
-    '/experiences/helium.html',
+    '/experiences/hydrogen/hydrogen.html',
+    '/experiences/helium/helium.html',
+    '/experiences/lithium/lithium.html',
 
-    '/js/hydrogen/sketch.js',
-    '/js/hydrogen/shape.js',
-    '/js/helium/sketch.js',
+    '/experiences/hydrogen/sketch.js',
+    '/experiences/hydrogen/shape.js',
+    
+    '/experiences/helium/sketch.js',
+    
+    '/experiences/lithium/sketch.js',
+    '/experiences/lithium/brush.js',
 
     '/css/main.css',
     '/js/main.js',
@@ -35,7 +40,6 @@ self.addEventListener("install", function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-    console.log(event.request.url);
     event.respondWith(
         caches.match(event.request).then(function(response) {
             return response || fetch(event.request);
