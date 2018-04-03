@@ -1,5 +1,5 @@
 let brushes = [];
-let no_of_brushes = 10;
+let no_of_brushes = 100;
 
 function setup(){
 	createCanvas(windowWidth, windowHeight);
