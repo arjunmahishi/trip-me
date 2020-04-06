@@ -11,7 +11,7 @@ const randomHexColor = () => {
         ? (Math.random()*0xf|0).toString(16) + n : n);
 }
 
-const openExp = (exp) => location.pathname = `experiences/${exp}/${exp}.html`;
+const openExp = (exp) => location.pathname = location.pathname + `experiences/${exp}/${exp}.html`;
 
 experiences.map(exp => {
 	var card = `
